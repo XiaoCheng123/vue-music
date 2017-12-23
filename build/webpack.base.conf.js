@@ -61,6 +61,10 @@ module.exports = {
         include: ['node build/dev-server.js']
       },
       {
+        test: /\.css$/,
+        loader: 'style!css'
+      },
+      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {
