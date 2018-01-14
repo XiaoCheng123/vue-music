@@ -4,8 +4,15 @@ import 'babel-polyfill'
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import axios from 'axios'
+import VueLazyload from 'vue-lazyload'
 import 'common/stylus/index.styl'
+
+Vue.prototype.$axios = axios
+Vue.use(VueLazyload, {
+  error: 'src/common/image/default.png',
+  loading: 'src/common/image/default.png'
+})
 
 Vue.config.productionTip = false
 
